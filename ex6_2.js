@@ -10,9 +10,25 @@ frm.addEventListener('submit', (e) => {
     const val = frm.inNumero.number //obtem o nome do paciente
     tentativas.push(val) //adiciona elemento no final do vetor
     console.log(tentativas);
+    let lista=''
+    for(let i = 0; i < tentativas.length; i++){
+        lista+= lista + "; "
+    }
+    if (val == num){
+        //respLista.innerText = "Parabéns você acertou!"
+    }
+    if (val < num){
+        //= "O número é maior do que o digitado."
+    }
+    if (val > num){
+        //= "O número é menor do que o digitado."
+    }
+    if (val != num){
+        //erros = erros +1
+    }
     
-    respLista.innerText = tentativas //exiba a lista de pacientes
-    frm.inNumero = ''
+    respLista.innerText = lista //exiba a lista de pacientes
+    frm.inNumero.value = ''
     frm.inNumero.focus() //posiciona o cursor no campo
 
     
